@@ -1,0 +1,32 @@
+[readMore]
+other = "続きを読む"
+
+[home]
+other = "ホーム"
+
+[posts]
+other = "ブログ"
+
+[recent_posts]
+other = "最新の記事"
+
+[next_page]
+other = "次のページ"
+
+[prev_page]
+other = "前のページ"
+
+[category]
+other = "カテゴリー"
+
+[tags]
+other = "タグ"
+
+[date]
+other = "日付"
+
+[poweredBy]
+other = "Powered by"
+
+[allRightsReserved]
+other = "All rights reserved." 

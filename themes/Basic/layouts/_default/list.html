@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="list-page">
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">{{ .Title }}</h1>
+            {{ if .Content }}
+            <div class="page-description">
+                {{ .Content }}
+            </div>
+            {{ end }}
+        </header>
+        
+        <div class="posts-list">
+            {{ range .RegularPages }}
+            <article class="post-item-card">
+                <div class="post-item-content">
+                    <h2 class="post-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-date">
+                            {{ .Date.Format "2006年1月2日" }}
+                        </time>
+                        {{ if .Params.category }}
+                        <span class="post-category">{{ .Params.category }}</span>
+                        {{ end }}
+                        {{ if .Params.subcategory }}
+                        <span class="post-subcategory">{{ .Params.subcategory }}</span>
+                        {{ end }}
+                    </div>
+                    {{ if .Params.tags }}
+                    <div class="post-tags">
+                        {{ range .Params.tags }}
+                        <span class="post-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    {{ if .Summary }}
+                    <p class="post-summary">{{ .Summary | plainify | truncate 150 "..." }}</p>
+                    {{ end }}
+                    <div class="post-item-footer">
+                        <a href="{{ .RelPermalink }}" class="read-more">続きを読む</a>
+                    </div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        
+        {{ if .Paginator.HasPrev }}
+        <div class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class="page-prev">← 前のページ</a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" class="page-next">次のページ →</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }} 

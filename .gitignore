@@ -1,0 +1,37 @@
+# Hugo default output directory
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Hugo環境ファイル
+.hugo_build.lock
+
+# OS生成ファイル
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# エディタ固有のファイル
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings
+
+# 一時ファイル
+*.swp
+*.swo
+*~
+\#*\# 

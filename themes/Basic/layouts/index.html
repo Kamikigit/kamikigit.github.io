@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<section class="recent-posts">
+    <div class="container">
+        <h2 class="section-title">最新の記事</h2>
+        <div class="posts-grid">
+            {{ range (.Site.RegularPages.ByDate.Reverse) }}
+            {{ if eq .Type "posts" }}
+            <article class="post-card">
+                <div class="post-content">
+                    <h3 class="post-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h3>
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ .Date.Format "2006年1月2日" }}
+                        </time>
+                        {{ if .Params.category }}
+                        <span class="post-category">{{ .Params.category }}</span>
+                        {{ end }}
+                    </div>
+                    {{ if .Summary }}
+                    <p class="post-summary">{{ .Summary | plainify | truncate 100 "..." }}</p>
+                    {{ end }}
+                    <a href="{{ .RelPermalink }}" class="read-more">続きを読む</a>
+                </div>
+            </article>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+{{ end }} 

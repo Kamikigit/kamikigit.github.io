@@ -1,0 +1,32 @@
+[readMore]
+other = "Read More"
+
+[home]
+other = "Home"
+
+[posts]
+other = "Posts"
+
+[recent_posts]
+other = "Recent Posts"
+
+[next_page]
+other = "Next Page"
+
+[prev_page]
+other = "Previous Page"
+
+[category]
+other = "Category"
+
+[tags]
+other = "Tags"
+
+[date]
+other = "Date"
+
+[poweredBy]
+other = "Powered by"
+
+[allRightsReserved]
+other = "All rights reserved." 
