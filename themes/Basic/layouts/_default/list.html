@@ -18,15 +18,24 @@
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </h2>
                     <div class="post-meta">
-                        <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-date">
-                            {{ .Date.Format "2006年1月2日" }}
-                        </time>
-                        {{ if .Params.category }}
-                        <span class="post-category">{{ .Params.category }}</span>
-                        {{ end }}
-                        {{ if .Params.subcategory }}
-                        <span class="post-subcategory">{{ .Params.subcategory }}</span>
-                        {{ end }}
+                        <div class="post-dates">
+                            <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-date">
+                                <i class="fas fa-calendar-plus"></i> {{ .Date.Format "2006年1月2日" }}
+                            </time>
+                            {{ if and .Lastmod (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+                            <time datetime="{{ .Lastmod.Format "2006-01-02" }}" class="post-lastmod">
+                                <i class="fas fa-calendar-check"></i> 更新: {{ .Lastmod.Format "2006年1月2日" }}
+                            </time>
+                            {{ end }}
+                        </div>
+                        <div class="post-categories">
+                            {{ if .Params.category }}
+                            <span class="post-category">{{ .Params.category }}</span>
+                            {{ end }}
+                            {{ if .Params.subcategory }}
+                            <span class="post-subcategory">{{ .Params.subcategory }}</span>
+                            {{ end }}
+                        </div>
                     </div>
                     {{ if .Params.tags }}
                     <div class="post-tags">
