@@ -10,12 +10,6 @@ buildDrafts = false
     [markup.goldmark.renderer]
       unsafe = true
 
-# 更新日の自動検出設定
-enableGitInfo = true  # Gitコミット日を自動で更新日として使用
-
-[frontmatter]
-  lastmod = [":git", ":fileModTime", ":default"]
-
 [taxonomies]
   category = 'category'
   subcategory = 'subcategory'
