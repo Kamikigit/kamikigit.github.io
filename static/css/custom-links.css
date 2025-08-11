@@ -1,0 +1,77 @@
+/* カスタムリンクスタイル - 記事内のリンクのみに適用 */
+
+/* 外部リンクアイコンのスタイル - 記事内のみ */
+.content a[target="_blank"] svg,
+article a[target="_blank"] svg,
+.post-content a[target="_blank"] svg,
+main a[target="_blank"] svg {
+  transition: all 0.2s ease;
+  fill: currentColor;
+  opacity: 0.6;
+}
+
+.content a[target="_blank"]:hover svg,
+article a[target="_blank"]:hover svg,
+.post-content a[target="_blank"]:hover svg,
+main a[target="_blank"]:hover svg {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 外部リンクのホバーエフェクト - 記事内のみ */
+.content a[target="_blank"],
+article a[target="_blank"],
+.post-content a[target="_blank"],
+main a[target="_blank"] {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(19, 78, 215, 0.3);
+  color: #134ed7;
+  transition: all 0.2s ease;
+}
+
+.content a[target="_blank"]:hover,
+article a[target="_blank"]:hover,
+.post-content a[target="_blank"]:hover,
+main a[target="_blank"]:hover {
+  border-bottom-color: rgba(19, 78, 215, 0.8);
+  color: #0f3eb8;
+  text-decoration: none;
+}
+
+/* 内部リンクとアンカーリンクのスタイル - 記事内のみ */
+.content a:not([target="_blank"]):not([href^="mailto:"]),
+article a:not([target="_blank"]):not([href^="mailto:"]),
+.post-content a:not([target="_blank"]):not([href^="mailto:"]),
+main a:not([target="_blank"]):not([href^="mailto:"]) {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(19, 78, 215, 0.3);
+  color: #134ed7;
+  transition: all 0.2s ease;
+}
+
+.content a:not([target="_blank"]):not([href^="mailto:"]):hover,
+article a:not([target="_blank"]):not([href^="mailto:"]):hover,
+.post-content a:not([target="_blank"]):not([href^="mailto:"]):hover,
+main a:not([target="_blank"]):not([href^="mailto:"]):hover {
+  border-bottom-color: rgba(19, 78, 215, 0.8);
+  color: #0f3eb8;
+}
+
+
+
+/* コンテンツ領域内のリンクに限定 */
+.content a,
+article a,
+.post-content a,
+main a {
+  word-wrap: break-word;
+}
+
+/* 記事内のリンクが長い場合の改行処理 */
+.content a,
+article a,
+.post-content a,
+main a {
+  word-break: break-word;
+  hyphens: auto;
+}
