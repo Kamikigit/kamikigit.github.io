@@ -1,0 +1,199 @@
+/* 記事内見出しのカスタムスタイル */
+
+/* H2 見出し - ボーダーライン付き */
+.post-content h2,
+.content h2,
+article h2,
+main h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 600;
+  color: #000;
+}
+
+.post-content h2::before,
+.content h2::before,
+article h2::before,
+main h2::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #134ed7, #3d6eff);
+}
+
+/* H3 見出し - 左ボーダー付き */
+.post-content h3,
+.content h3,
+article h3,
+main h3 {
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-content h3::before,
+.content h3::before,
+article h3::before,
+main h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 4px;
+  height: calc(100% - 0.4rem);
+  background: linear-gradient(to bottom, #134ed7, #3d6eff);
+  border-radius: 2px;
+}
+
+/* H4 見出し - アイコン付き */
+.post-content h4,
+.content h4,
+article h4,
+main h4 {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.post-content h4::before,
+.content h4::before,
+article h4::before,
+main h4::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #134ed7;
+  font-size: 0.8em;
+  line-height: 1.2;
+}
+
+/* H5, H6 - シンプルなスタイル */
+.post-content h5,
+.content h5,
+article h5,
+main h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  font-style: italic;
+}
+
+.post-content h6,
+.content h6,
+article h6,
+main h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* ホバーエフェクト */
+.post-content h2:hover::before,
+.content h2:hover::before,
+article h2:hover::before,
+main h2:hover::before {
+  width: 80px;
+  transition: width 0.3s ease;
+}
+
+.post-content h3:hover::before,
+.content h3:hover::before,
+article h3:hover::before,
+main h3:hover::before {
+  width: 6px;
+  transition: width 0.3s ease;
+}
+
+.post-content h4:hover::before,
+.content h4:hover::before,
+article h4:hover::before,
+main h4:hover::before {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .post-content h2,
+  .content h2,
+  article h2,
+  main h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .post-content h3,
+  .content h3,
+  article h3,
+  main h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    padding-left: 0.8rem;
+  }
+  
+  .post-content h4,
+  .content h4,
+  article h4,
+  main h4 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    padding-left: 1.2rem;
+  }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+  .post-content h2,
+  .content h2,
+  article h2,
+  main h2 {
+    color: #e0e0e0;
+    border-bottom-color: #404040;
+  }
+  
+  .post-content h3,
+  .content h3,
+  article h3,
+  main h3 {
+    color: #d0d0d0;
+  }
+  
+  .post-content h4,
+  .content h4,
+  article h4,
+  main h4 {
+    color: #c0c0c0;
+  }
+  
+  .post-content h5,
+  .content h5,
+  article h5,
+  main h5 {
+    color: #b0b0b0;
+  }
+  
+  .post-content h6,
+  .content h6,
+  article h6,
+  main h6 {
+    color: #a0a0a0;
+  }
+}
