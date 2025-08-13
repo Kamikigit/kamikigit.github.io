@@ -138,6 +138,7 @@ main h4:hover::before {
   main h2 {
     font-size: 1.5rem;
     margin-top: 2rem;
+    color: #000; /* モバイルでも濃い色を保持 */
   }
   
   .post-content h3,
@@ -147,6 +148,7 @@ main h4:hover::before {
     font-size: 1.25rem;
     margin-top: 1.5rem;
     padding-left: 0.8rem;
+    color: #333; /* モバイルでも濃い色を保持 */
   }
   
   .post-content h4,
@@ -156,44 +158,21 @@ main h4:hover::before {
     font-size: 1.1rem;
     margin-top: 1.5rem;
     padding-left: 1.2rem;
-  }
-}
-
-/* ダークモード対応 */
-@media (prefers-color-scheme: dark) {
-  .post-content h2,
-  .content h2,
-  article h2,
-  main h2 {
-    color: #e0e0e0;
-    border-bottom-color: #404040;
-  }
-  
-  .post-content h3,
-  .content h3,
-  article h3,
-  main h3 {
-    color: #d0d0d0;
-  }
-  
-  .post-content h4,
-  .content h4,
-  article h4,
-  main h4 {
-    color: #c0c0c0;
+    color: #444; /* モバイルでも濃い色を保持 */
   }
   
   .post-content h5,
   .content h5,
   article h5,
   main h5 {
-    color: #b0b0b0;
+    color: #555; /* モバイルでも適切な色を保持 */
   }
   
   .post-content h6,
   .content h6,
   article h6,
   main h6 {
-    color: #a0a0a0;
+    color: #666; /* モバイルでも適切な色を保持 */
   }
 }
+
