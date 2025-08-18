@@ -1,7 +1,7 @@
 +++
 date = '2025-08-18T13:05:19+09:00'
 lastmod = '2025-08-18T13:05:19+09:00'
-draft = true
+draft = false
 tags = ["Dify", "Firecrawl"]
 category = "Howto"
 subcategory = ""
