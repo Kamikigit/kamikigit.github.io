@@ -1,5 +1,6 @@
 +++
 date = '{{ .Date }}'
+lastmod = '{{ .Date }}'
 draft = true
 tags = []
 category = ""
