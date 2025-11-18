@@ -1,7 +1,7 @@
 +++
 date = '2025-11-15T16:50:57+09:00'
 lastmod = '2025-11-15T16:50:57+09:00'
-draft = true
+draft = false
 tags = ["BigQuery", "GA4", "GSC"]
 category = "Howto"
 subcategory = ""
